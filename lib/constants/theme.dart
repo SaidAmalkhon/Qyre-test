@@ -7,6 +7,8 @@ abstract class Apptheme {
         headline1: headline1,
         headline2: headline2,
         headline3: headline3,
+        bodyText1: bodyText1, 
+        bodyText2: bodyText2,
       ));
 
   static const gray = Color(0xffF0F2F5);
@@ -39,6 +41,18 @@ abstract class Apptheme {
     fontWeight: FontWeight.w700,
     fontSize: 16,
     color: white,
+    fontFamily: 'Matter',
+  );
+  static const bodyText1 = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 18,
+    fontFamily: 'Matter',
+    color: deepGray,
+  );
+  static const bodyText2 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 10,
+    color: darkGray,
     fontFamily: 'Matter',
   );
 }

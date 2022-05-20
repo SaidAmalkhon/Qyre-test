@@ -9,7 +9,8 @@ abstract class Apptheme {
         headline3: headline3,
         bodyText1: bodyText1,
         bodyText2: bodyText2,
-        subtitle1: subTitle1,
+        subtitle1: subtitle1,
+        subtitle2: subtitle2,
       ));
 
   static const gray = Color(0xffF0F2F5);
@@ -56,10 +57,16 @@ abstract class Apptheme {
     color: darkGray,
     fontFamily: 'Matter',
   );
-  static const subTitle1 = TextStyle(
+  static const subtitle1 = TextStyle(
     fontSize: 10,
     fontFamily: 'Matter',
     fontWeight: FontWeight.w500,
     color: white,
+  );
+  static const subtitle2 = TextStyle(
+    fontFamily: 'Matter',
+    fontSize: 10,
+    fontWeight: FontWeight.w600,
+    color: lightGray,
   );
 }

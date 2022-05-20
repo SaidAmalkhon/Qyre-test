@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:qyre_test/constants/icons.dart';
@@ -14,7 +16,7 @@ class MainPage extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: PreferredSize(
-        child: Container(),
+        child: SizedBox(child: ClipRRect(child: BackdropFilter(filter:  ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0), child: Text('My Availability', style: textTheme.headline1,),),),),
         preferredSize: const Size(double.infinity, 90),
       ),
       body: Padding(

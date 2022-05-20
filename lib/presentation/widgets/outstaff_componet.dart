@@ -23,25 +23,26 @@ class OutstaffComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Container(
-      height: 140,
-      padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 12),
+      height: 148,
+      padding: const EdgeInsets.only(top: 17, left: 12, right: 12),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4),
           gradient: LinearGradient(
-            colors: [ firstColor, secondColor],
+            colors: [firstColor, secondColor],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           )),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-         icon,
-          const SizedBox(height: 12),
-          DefaultTextStyle.merge(style: textTheme.headline1!.copyWith(color: Apptheme.white, fontSize: 14), child: title),
-          const SizedBox(height: 3),
-          DefaultTextStyle.merge(
-              child: subtitle, style: textTheme.subtitle1, maxLines: 3, overflow: TextOverflow.ellipsis)
-        ],
+      child: Flexible(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            icon,
+            const SizedBox(height: 8),
+            DefaultTextStyle.merge(style: textTheme.headline1!.copyWith(color: Apptheme.white, fontSize: 14), child: title),
+            const SizedBox(height: 3),
+            DefaultTextStyle.merge(child: subtitle, style: textTheme.subtitle1, maxLines: 3, overflow: TextOverflow.ellipsis)
+          ],
+        ),
       ),
     );
   }

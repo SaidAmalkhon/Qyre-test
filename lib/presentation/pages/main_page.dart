@@ -217,10 +217,11 @@ class _MainPageState extends State<MainPage> {
                   child: AnimatedContainer(
                     duration: const Duration(milliseconds: 600),
                     curve: Curves.easeInOutCubic,
-                    height: 43,
+                    height: 46,
                     child: ClipRRect(
                         child: BackdropFilter(
-                            filter: ImageFilter.blur(sigmaX: 90.0, sigmaY: 10.0), child: Padding(
+                            filter: ImageFilter.blur(sigmaX: 90.0, sigmaY: 10.0),
+                            child: Padding(
                               padding: const EdgeInsets.only(left: 16),
                               child: ReducedDays(generateDateList: generateDateList()),
                             ))),

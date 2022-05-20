@@ -13,7 +13,7 @@ class ProductionComponent extends StatelessWidget {
     Key? key,
     required this.title,
     required this.countryName,
-    required this.date, 
+    required this.date,
     required this.image,
   }) : super(key: key);
 
@@ -26,7 +26,9 @@ class ProductionComponent extends StatelessWidget {
           SizedBox(
             height: 70,
             child: ClipRRect(
-              child: Image(image: image,),
+              child: Image(
+                image: image,
+              ),
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(4),
                 bottomLeft: Radius.circular(4),
@@ -42,22 +44,26 @@ class ProductionComponent extends StatelessWidget {
                     topRight: Radius.circular(4),
                     bottomRight: Radius.circular(4),
                   )),
-              child: Row(
+              child: Row( 
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
-                    children: [
-                      DefaultTextStyle.merge(child: title, style: textTheme.headline2),
-                      const SizedBox(height: 4),
-                      Row(
-                        children: [
-                          DefaultTextStyle.merge(child: countryName, style: textTheme.bodyText2),
-                          const SizedBox(width: 6),
-                          DefaultTextStyle.merge(child: date, style: textTheme.bodyText2),
-                        ],
-                      )
-                    ],
+                  Flexible(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        DefaultTextStyle.merge(child: title, style: textTheme.headline2, overflow: TextOverflow.ellipsis),
+                        const SizedBox(height: 4),
+                        Row(
+                          children: [
+                            DefaultTextStyle.merge(child: countryName, style: textTheme.bodyText2),
+                            const SizedBox(width: 6),
+                            DefaultTextStyle.merge(child: date, style: textTheme.bodyText2),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-                  const Spacer(),
+                   
                   SvgPicture.asset(AppIcons.arrowRight)
                 ],
               ),
